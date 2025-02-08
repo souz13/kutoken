@@ -1,224 +1,558 @@
-
 {
-"version": "eosio::abi/1.2",
-"types": [
-],
-"structs": [
-{
-"name": "adex",
-"base": "",
-"fields": [...] // 2 items
-},
-{
-"name": "arblegone",
-"base": "",
-"fields": [...] // 7 items
-},
-{
-"name": "arblegtwo",
-"base": "",
-"fields": [...] // 7 items
-},
-{
-"name": "arblegtwoadd",
-"base": "",
-"fields": [...] // 7 items
-},
-{
-"name": "beforelegone",
-"base": "",
-"fields": [...] // 2 items
-},
-{
-"name": "checkbalance",
-"base": "",
-"fields": [...] // 3 items
-},
-{
-"name": "checkbalext",
-"base": "",
-"fields": [...] // 4 items
-},
-{
-"name": "clear",
-"base": "",
-"fields": [...] // 0 items
-},
-{
-"name": "contracts",
-"base": "",
-"fields": [...] // 2 items
-},
-{
-"name": "data",
-"base": "",
-"fields": [...] // 3 items
-},
-{
-"name": "extended_symbol",
-"base": "",
-"fields": [...] // 2 items
-},
-{
-"name": "microseconds",
-"base": "",
-"fields": [...] // 1 items
-},
-{
-"name": "pswap",
-"base": "",
-"fields": [...] // 2 items
-},
-{
-"name": "redeemalllend",
-"base": "",
-"fields": [...] // 2 items
-},
-{
-"name": "savebalance",
-"base": "",
-"fields": [...] // 4 items
-},
-{
-"name": "success",
-"base": "",
-"fields": [...] // 3 items
-},
-{
-"name": "supertrade",
-"base": "",
-"fields": [...] // 3 items
-},
-{
-"name": "sxsxlegone",
-"base": "",
-"fields": [...] // 10 items
-},
-{
-"name": "sxsxsxlegone",
-"base": "",
-"fields": [...] // 14 items
-},
-{
-"name": "trade",
-"base": "",
-"fields": [...] // 2 items
-}
-],
-"actions": [
-{
-"name": "arblegone",
-"type": "arblegone",
-"ricardian_contract": ""
-},
-{
-"name": "arblegtwo",
-"type": "arblegtwo",
-"ricardian_contract": ""
-},
-{
-"name": "arblegtwoadd",
-"type": "arblegtwoadd",
-"ricardian_contract": ""
-},
-{
-"name": "checkbalance",
-"type": "checkbalance",
-"ricardian_contract": ""
-},
-{
-"name": "checkbalext",
-"type": "checkbalext",
-"ricardian_contract": ""
-},
-{
-"name": "clear",
-"type": "clear",
-"ricardian_contract": ""
-},
-{
-"name": "redeemalllend",
-"type": "redeemalllend",
-"ricardian_contract": ""
-},
-{
-"name": "savebalance",
-"type": "savebalance",
-"ricardian_contract": ""
-},
-{
-"name": "supertrade",
-"type": "supertrade",
-"ricardian_contract": ""
-},
-{
-"name": "sxsxlegone",
-"type": "sxsxlegone",
-"ricardian_contract": ""
-},
-{
-"name": "sxsxsxlegone",
-"type": "sxsxsxlegone",
-"ricardian_contract": ""
-},
-{
-"name": "trade",
-"type": "trade",
-"ricardian_contract": ""
-}
-],
-"tables": [
-{
-"name": "adex",
-"index_type": "i64",
-"key_names": [...], // 0 items
-"key_types": [...], // 0 items
-"type": "adex"
-},
-{
-"name": "beforelegone",
-"index_type": "i64",
-"key_names": [...], // 0 items
-"key_types": [...], // 0 items
-"type": "beforelegone"
-},
-{
-"name": "contracts",
-"index_type": "i64",
-"key_names": [...], // 0 items
-"key_types": [...], // 0 items
-"type": "contracts"
-},
-{
-"name": "data",
-"index_type": "i64",
-"key_names": [...], // 0 items
-"key_types": [...], // 0 items
-"type": "data"
-},
-{
-"name": "pswap",
-"index_type": "i64",
-"key_names": [...], // 0 items
-"key_types": [...], // 0 items
-"type": "pswap"
-},
-{
-"name": "success",
-"index_type": "i64",
-"key_names": [...], // 0 items
-"key_types": [...], // 0 items
-"type": "success"
-}
-],
-"ricardian_clauses": [
-],
-"error_messages": [
-],
-"abi_extensions": [
-],
-"variants": [
-],
-"action_results": [
-]
-}
+  "account_name": "noloss",
+  "abi": {
+    "version": "eosio::abi/1.2",
+    "types": [],
+    "structs": [
+      {
+        "name": "adex",
+        "base": "",
+        "fields": [
+          {
+            "name": "key",
+            "type": "uint64"
+          },
+          {
+            "name": "val",
+            "type": "uint64"
+          }
+        ]
+      },
+      {
+        "name": "arblegone",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "buy_contract",
+            "type": "name"
+          },
+          {
+            "name": "buy_from",
+            "type": "name"
+          },
+          {
+            "name": "buy_memo",
+            "type": "string"
+          },
+          {
+            "name": "quantity",
+            "type": "asset"
+          },
+          {
+            "name": "sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "sell_sym",
+            "type": "symbol_code"
+          }
+        ]
+      },
+      {
+        "name": "arblegtwo",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "sell_sym",
+            "type": "symbol_code"
+          },
+          {
+            "name": "sell_to",
+            "type": "name"
+          },
+          {
+            "name": "sell_memo",
+            "type": "string"
+          },
+          {
+            "name": "additional_sell_contract",
+            "type": "name?"
+          },
+          {
+            "name": "additional_sell_sym",
+            "type": "symbol_code?"
+          }
+        ]
+      },
+      {
+        "name": "arblegtwoadd",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "sell_sym",
+            "type": "symbol_code"
+          },
+          {
+            "name": "sell_to",
+            "type": "name"
+          },
+          {
+            "name": "sell_memo",
+            "type": "string"
+          },
+          {
+            "name": "additional_sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "additional_sell_sym",
+            "type": "symbol_code"
+          }
+        ]
+      },
+      {
+        "name": "beforelegone",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "balance",
+            "type": "asset"
+          }
+        ]
+      },
+      {
+        "name": "checkbalance",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "contract",
+            "type": "name"
+          },
+          {
+            "name": "sym",
+            "type": "symbol_code"
+          }
+        ]
+      },
+      {
+        "name": "checkbalext",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "contract",
+            "type": "name"
+          },
+          {
+            "name": "sym",
+            "type": "symbol_code"
+          },
+          {
+            "name": "message",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "clear",
+        "base": "",
+        "fields": []
+      },
+      {
+        "name": "contracts",
+        "base": "",
+        "fields": [
+          {
+            "name": "key",
+            "type": "symbol_code"
+          },
+          {
+            "name": "val",
+            "type": "name"
+          }
+        ]
+      },
+      {
+        "name": "data",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "balance",
+            "type": "asset"
+          },
+          {
+            "name": "min_profit",
+            "type": "asset"
+          }
+        ]
+      },
+      {
+        "name": "extended_symbol",
+        "base": "",
+        "fields": [
+          {
+            "name": "sym",
+            "type": "symbol"
+          },
+          {
+            "name": "contract",
+            "type": "name"
+          }
+        ]
+      },
+      {
+        "name": "microseconds",
+        "base": "",
+        "fields": [
+          {
+            "name": "_count",
+            "type": "int64"
+          }
+        ]
+      },
+      {
+        "name": "pswap",
+        "base": "",
+        "fields": [
+          {
+            "name": "key",
+            "type": "uint64"
+          },
+          {
+            "name": "val",
+            "type": "symbol"
+          }
+        ]
+      },
+      {
+        "name": "redeemalllend",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "extsym",
+            "type": "extended_symbol"
+          }
+        ]
+      },
+      {
+        "name": "savebalance",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "contract",
+            "type": "name"
+          },
+          {
+            "name": "sym",
+            "type": "symbol_code"
+          },
+          {
+            "name": "min_profit",
+            "type": "asset"
+          }
+        ]
+      },
+      {
+        "name": "success",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "t",
+            "type": "microseconds"
+          },
+          {
+            "name": "n",
+            "type": "uint64"
+          }
+        ]
+      },
+      {
+        "name": "supertrade",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "unique",
+            "type": "uint64"
+          },
+          {
+            "name": "d",
+            "type": "uint64"
+          }
+        ]
+      },
+      {
+        "name": "sxsxlegone",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "buy_contract",
+            "type": "name"
+          },
+          {
+            "name": "buy_sym",
+            "type": "symbol"
+          },
+          {
+            "name": "buy_from",
+            "type": "name"
+          },
+          {
+            "name": "buy_memo",
+            "type": "string"
+          },
+          {
+            "name": "sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "sell_sym",
+            "type": "symbol"
+          },
+          {
+            "name": "sell_to",
+            "type": "name"
+          },
+          {
+            "name": "sell_memo",
+            "type": "string"
+          },
+          {
+            "name": "unique",
+            "type": "uint64"
+          }
+        ]
+      },
+      {
+        "name": "sxsxsxlegone",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "buy_contract",
+            "type": "name"
+          },
+          {
+            "name": "buy_sym",
+            "type": "symbol"
+          },
+          {
+            "name": "buy_from",
+            "type": "name"
+          },
+          {
+            "name": "buy_memo",
+            "type": "string"
+          },
+          {
+            "name": "sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "sell_sym",
+            "type": "symbol"
+          },
+          {
+            "name": "sell_to",
+            "type": "name"
+          },
+          {
+            "name": "sell_memo",
+            "type": "string"
+          },
+          {
+            "name": "additional_sell_contract",
+            "type": "name"
+          },
+          {
+            "name": "additional_sell_sym",
+            "type": "symbol"
+          },
+          {
+            "name": "additional_sell_to",
+            "type": "name"
+          },
+          {
+            "name": "additional_sell_memo",
+            "type": "string"
+          },
+          {
+            "name": "unique",
+            "type": "uint64"
+          }
+        ]
+      },
+      {
+        "name": "trade",
+        "base": "",
+        "fields": [
+          {
+            "name": "user",
+            "type": "name"
+          },
+          {
+            "name": "unique",
+            "type": "uint64"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "arblegone",
+        "type": "arblegone",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "arblegtwo",
+        "type": "arblegtwo",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "arblegtwoadd",
+        "type": "arblegtwoadd",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "checkbalance",
+        "type": "checkbalance",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "checkbalext",
+        "type": "checkbalext",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "clear",
+        "type": "clear",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "redeemalllend",
+        "type": "redeemalllend",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "savebalance",
+        "type": "savebalance",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "supertrade",
+        "type": "supertrade",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "sxsxlegone",
+        "type": "sxsxlegone",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "sxsxsxlegone",
+        "type": "sxsxsxlegone",
+        "ricardian_contract": ""
+      },
+      {
+        "name": "trade",
+        "type": "trade",
+        "ricardian_contract": ""
+      }
+    ],
+    "tables": [
+      {
+        "name": "adex",
+        "index_type": "i64",
+        "key_names": [],
+        "key_types": [],
+        "type": "adex"
+      },
+      {
+        "name": "beforelegone",
+        "index_type": "i64",
+        "key_names": [],
+        "key_types": [],
+        "type": "beforelegone"
+      },
+      {
+        "name": "contracts",
+        "index_type": "i64",
+        "key_names": [],
+        "key_types": [],
+        "type": "contracts"
+      },
+      {
+        "name": "data",
+        "index_type": "i64",
+        "key_names": [],
+        "key_types": [],
+        "type": "data"
+      },
+      {
+        "name": "pswap",
+        "index_type": "i64",
+        "key_names": [],
+        "key_types": [],
+        "type": "pswap"
+      },
+      {
+        "name": "success",
+        "index_type": "i64",
+        "key_names": [],
+        "key_types": [],
+        "type": "success"
+      }
+    ],
+    "ricardian_clauses": [],
+    "error_messages": [],
+    "abi_extensions": [],
+    "variants": [],
+    "action_results": []
+  }
